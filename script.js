@@ -28,9 +28,9 @@ function filterResult (jsonData) {
 //Funzione di creazione nodi
 
 /*
-    <div class="card mb-5 border-0">
+    <div class="card mb-5 border-0 col-lg-2 col-md-4 col-sm-6">
         <div class="card-img">
-            <img src="" alt="" class="img-fluid rounded">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
         </div>
         <div class="card-text">
             <div class="price d-flex align-items-center mt-1">
@@ -39,7 +39,7 @@ function filterResult (jsonData) {
                     <span class="mx-1 star-rating-num">4.75</span>
                 </span>
             </div>
-            <p class="title-info mb-0"></p>
+            <p class="title-info mb-0">Ciao come va</p>
         </div>
     </div>
 */
@@ -47,7 +47,7 @@ function filterResult (jsonData) {
 function createCard (result) {
     result.forEach(book => {
         let card = document.createElement("div");
-        card.classList.add("card", "mb-5", "border-0");
+        card.classList.add("card", "mb-5", "ms-1", "border-0", "col-lg-2", "col-md-4", "col-sm-6");
         let imgBox = document.createElement("div");
         imgBox.classList.add("card-img");
         let bookImg = document.createElement("img");
@@ -66,6 +66,17 @@ function createCard (result) {
         let title = document.createElement("p");
         title.classList.add("mb-0");
         title.innerText = book.title;
+        let buttonBox = document.createElement("div");
+        buttonBox.classList.add("row")
+        let cartButton = document.createElement("button");
+        cartButton.classList.add("btn", "btn-success", "mb-1", "col-6");
+        cartButton.type = "button";
+        cartButton.innerText = "Add to Cart";
+        let skipButton = document.createElement("button");
+        skipButton.classList.add("btn", "btn-danger", "mb-1", "col-6");
+        skipButton.type = "button";
+        skipButton.innerText = "Skip";
+
 
         resultsBox.appendChild(card);
             card.appendChild(imgBox);
@@ -75,6 +86,9 @@ function createCard (result) {
                     priceBox.appendChild(priceBoxInner);
                         priceBoxInner.appendChild(dynPrice);
                     textBox.appendChild(title);
+            card.appendChild(buttonBox);
+                buttonBox.appendChild(cartButton);
+                buttonBox.appendChild(skipButton);
     });
 }
 

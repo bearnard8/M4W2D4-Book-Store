@@ -29,6 +29,14 @@
                         </ul>
                     </li>
                 </div>
+                <div class="input-group mt-3 container-fluid order-md-3" style="width: 25%">
+                    <input type="text" class="form-control mb-2" id="search-field" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-sm" type="button" id="search-btn" onclick="getResults()">
+                            GO
+                        </button>
+                    </div>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,103 +62,10 @@
             </div>
         </nav>
         
-        <div class="input-group mt-3 container-fluid">
-            <input type="text" class="form-control mb-2" id="search-field" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" />
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary btn-sm" type="button" id="search-btn" onclick="getResults()">
-                    GO
-                </button>
-            </div>
-        </div>
+        
 
         <div class="container-fluid mt-5">
-            <div class="row row-cols-xl-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 d-flex justify-content-start">
-                <div class="col" id="card-container">
-                    <div class="card mb-5 border-0">
-                        <div class="card-img">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="card-text">
-                            <div class="price d-flex align-items-center mt-1">
-                                <span class="star-rating d-flex align-items-center">
-                                    €
-                                    <span class="mx-1 star-rating-num">4.75</span>
-                                </span>
-                            </div>
-                            <p class="title-info mb-0">Ciao come va</p>
-                        </div>
-                    </div>
-                    <div class="card mb-5 border-0">
-                        <div class="card-img">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="card-text">
-                            <div class="price d-flex align-items-center mt-1">
-                                <span class="star-rating d-flex align-items-center">
-                                    €
-                                    <span class="mx-1 star-rating-num">4.75</span>
-                                </span>
-                            </div>
-                            <p class="title-info mb-0">Ciao come va</p>
-                        </div>
-                    </div>
-                    <div class="card mb-5 border-0">
-                        <div class="card-img">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="card-text">
-                            <div class="price d-flex align-items-center mt-1">
-                                <span class="star-rating d-flex align-items-center">
-                                    €
-                                    <span class="mx-1 star-rating-num">4.75</span>
-                                </span>
-                            </div>
-                            <p class="title-info mb-0">Ciao come va</p>
-                        </div>
-                    </div>
-                    <div class="card mb-5 border-0">
-                        <div class="card-img">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="card-text">
-                            <div class="price d-flex align-items-center mt-1">
-                                <span class="star-rating d-flex align-items-center">
-                                    €
-                                    <span class="mx-1 star-rating-num">4.75</span>
-                                </span>
-                            </div>
-                            <p class="title-info mb-0">Ciao come va</p>
-                        </div>
-                    </div>
-                    <div class="card mb-5 border-0">
-                        <div class="card-img">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="card-text">
-                            <div class="price d-flex align-items-center mt-1">
-                                <span class="star-rating d-flex align-items-center">
-                                    €
-                                    <span class="mx-1 star-rating-num">4.75</span>
-                                </span>
-                            </div>
-                            <p class="title-info mb-0">Ciao come va</p>
-                        </div>
-                    </div>
-                    <div class="card mb-5 border-0">
-                        <div class="card-img">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/91xrEMcvmQL.jpg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="card-text">
-                            <div class="price d-flex align-items-center mt-1">
-                                <span class="star-rating d-flex align-items-center">
-                                    €
-                                    <span class="mx-1 star-rating-num">4.75</span>
-                                </span>
-                            </div>
-                            <p class="title-info mb-0">Ciao come va</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row d-flex justify-content-start" id="card-container">
             </div>
         </div>
 
