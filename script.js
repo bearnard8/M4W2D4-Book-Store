@@ -8,6 +8,8 @@ const searchBtn = document.getElementById("search-btn");
 //Box dei risultati:
 const resultsBox = document.getElementById("card-container");
 
+//Variabile di carrello
+let cart = [];
 
 //Funzione di ricerca
 function getResults() {
@@ -71,11 +73,17 @@ function createCard (result) {
         let cartButton = document.createElement("button");
         cartButton.classList.add("btn", "btn-success", "mb-1", "col-6");
         cartButton.type = "button";
+        cartButton.addEventListener("click", () => {
+            addToCart(book);
+        });
         cartButton.innerText = "Add to Cart";
         let skipButton = document.createElement("button");
         skipButton.classList.add("btn", "btn-danger", "mb-1", "col-6");
         skipButton.type = "button";
         skipButton.innerText = "Skip";
+        skipButton.addEventListener("click", () => {
+            skipBook(card);
+        });
 
 
         resultsBox.appendChild(card);
@@ -94,4 +102,11 @@ function createCard (result) {
 
 //Funzione per il carrello
 
+function addToCart (book) {
+    cart.push(book);
+}
 
+//Funzione per "skippare" i libri
+function skipBook (card) {
+    card.classList.add("d-none");
+}
